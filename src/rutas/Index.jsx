@@ -20,23 +20,16 @@ const Index = () => {
           } catch (error) {
             console.error("Error fetching data:", error);
           }
-        // axios.get(liga).then( async(response) =>{
-        //     const respuesta = response.data;
-        //     setPokemons(respuesta.results);
-        //     console.log(pokemons);
+         axios.get(liga).then( async(response) =>{
+             const respuesta = response.data;
+             setPokemons(respuesta.results);
+             console.log(pokemons);
             
-        // })
+         })
     }
   return (
     <Container className="shadow gb-danger mt-3">
-        <Row>
-            {/* <Col>
-                <InputGroup className="mt-3 mb-3">
-                <InputGroupText><i className="fa-solid fa-search"/></InputGroupText>
-                <Input placeholder="Generaciones"/>
-                </InputGroup>
-            </Col> */}
-        </Row>
+        
         <Row className="mt-3">
             { pokemons.map( (pok,i)=>(
                 <Tarjetas poke={pok} key={i}/>

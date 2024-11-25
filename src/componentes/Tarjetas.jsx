@@ -38,11 +38,7 @@ const Tarjetas = ({ poke }) => {
           <Badge pill color="danger">#{pokemon.id}</Badge>
           <label className="fs-4 text-capitalize">{pokemon.name}</label>
         </CardBody>
-        <CardFooter className="bg-warning">
-          <Link className="btn btn-dark" to={`/pokemon/${pokemon.id}`}>
-            Ver Detalles
-          </Link>
-        </CardFooter>
+        
       </Card>
     </Col>
   );
