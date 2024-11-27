@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "reactstrap";
 import axios from "axios";
-import Tarjetas from "../componentes/Tarjetas";
+import Tarjetas from "./Tarjetas";
 
 function RandomPokemon() {
   const [pokemons, setPokemons] = useState([]);
@@ -9,7 +9,7 @@ function RandomPokemon() {
 
   useEffect(() => {
     const getPokemons = async () => {
-      const randomIds = Array.from({ length: 10 }, () => Math.floor(Math.random() * 101) + 152);
+      const randomIds = Array.from({ length: 10 }, () => Math.floor(Math.random() * 101) + 252);
       console.log('IDs aleatorios:', randomIds);
   
       try {
