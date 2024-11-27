@@ -16,10 +16,11 @@ const Tarjetas = ({ poke }) => {
         setPokemon(response.data);
         setImagen(response.data.sprites.front_default);
         setIsLoading(false); // Ocultar el GIF y mostrar la imagen
-      } catch (error) {
-        console.error("Error fetching Pokemon data:", error);
-        setIsLoading(false); // Ocultar el GIF en caso de error
-      }
+       } 
+       catch (error) { // Mostrar el GIF en caso de error
+      //   console.error("Error fetching Pokemon data:", error);
+      //   setIsLoading(True); 
+       }
     };
 
     getPokemon();
